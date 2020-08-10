@@ -1,0 +1,16 @@
+apply from: '../cs-module.build.gradle'
+apply from: "../cs-ext.gradle"
+
+android {
+    resourcePrefix 'ucrop_'
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:${cfgs.androidx_appcompat_version}"
+    implementation "androidx.exifinterface:exifinterface:${cfgs.androidx_exifinterface_version}"
+    implementation "androidx.transition:transition:${cfgs.androidx_transition_version}"
+    implementation "androidx.recyclerview:recyclerview:${cfgs.version_recyclerview}"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.0.2'
+}
